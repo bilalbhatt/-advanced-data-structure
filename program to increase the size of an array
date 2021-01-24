@@ -1,0 +1,25 @@
+#include<stdio.h>
+#include<stdlib.h>
+  //program to increase the size of an array
+  int main()
+  {
+      int i;
+    int *p, *q;
+      p=(int*)malloc(5*sizeof(int));
+       p[0]=213;
+       p[1]=223;
+        p[2]=233;
+         p[3]=243;
+          p[4]=253;
+          q=(int*)malloc(10*sizeof(int));
+          for(i=0;i<5;i++)
+          q[i]=p[i];
+          free (p);
+          p=q;
+          q=NULL;
+         
+      for(i=0;i<5;i++)
+      printf("%d\n",p[i]);
+      return 0;
+     
+  }
